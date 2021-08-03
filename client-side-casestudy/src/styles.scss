@@ -1,0 +1,61 @@
+/* You can add global styles to this file, and also import other style files */
+
+// custom theme
+@import "custom-theme.scss";
+.my-primary-text {
+  color: mat-color($candy-app-primary);
+}
+.my-accent-text {
+  color: mat-color($candy-app-accent);
+}
+.margin-right-2 {
+  margin-right: 2vw !important;
+}
+mat-list-item:nth-child(odd){
+  background-color:white;
+}
+mat-list-item:nth-child(even) {
+  background-color:#eeeeee;
+}
+mat-list-item:nth-child(odd){
+  background-color:white;
+}
+mat-list-item:nth-child(even) {
+  background-color:#eeeeee;
+}
+.padtop15 {
+  padding-top: 15%;
+}
+.padbot10 {
+  padding-bottom: 10%;
+}
+.material-icons.addicon {
+  font-size: 10vw;
+  position:absolute;
+  bottom:4vh;
+  left:8vw;
+}
+table {
+  width: 100%;
+}
+.center-header{
+  flex-direction: column;
+  justify-content: center;
+  font-weight: bolder;
+  margin-left:25px;
+}
+.mat-cell {
+  text-align: center;
+  justify-content:center;
+}
+.mat-row:nth-child(odd){
+  background-color:#eeeeee;
+  text-align: center;
+}
+.mat-row.ng-star-inserted:nth-child(even) {
+  background-color: white;
+  text-align: center;
+}
+button.mat-sort-header-button {
+  margin-left: 5vw;
+}

@@ -1,0 +1,8 @@
+POST http://localhost:8080/api/pos
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id":1,"vendorid":1, "amount": 785.98,"podate": "", "items":[{"id":1, "po":0, "productid": "3asdl", "qty":10,"price": 78.55,"name":"Red Toy Truck"},{"id": 1,"po":1,"productid": "4ab", "qty":10,"costprices":55.99,"price": 68.55, "name":"Toys"}]}
+
+###

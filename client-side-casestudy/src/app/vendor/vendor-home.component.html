@@ -1,0 +1,80 @@
+<!--<mat-toolbar color="primary">-->
+<!--  <span>INFO5059 - Case Study </span>-->
+<!--</mat-toolbar>-->
+<!--<mat-card *ngIf="hideEditForm">-->
+<!--  <mat-card-content style="display: flex; justify-content: center" *ngIf="vendors$ | async; else loading" >-->
+<!--  <img mat-card-image mat-card-sm-image style="padding: 30px" src="https://i.imgur.com/nuSVjU1.jpg" alt="vendors">-->
+<!--  <mat-card-title style="font-size: x-large; margin-right: 30px; margin-top: 30px"> - vendors</mat-card-title>-->
+<!--  </mat-card-content>-->
+<!--  <mat-card-content>-->
+<!--    <mat-card-header class="app-accent" layout="row"></mat-card-header>-->
+<!--    <mat-list flex>-->
+<!--      <app-vendor-list [vendors]="vendors$ | async">-->
+<!--      </app-vendor-list>-->
+<!--    </mat-list>-->
+<!--  </mat-card-content>-->
+<!--  <ng-template #loading class="my-primary-text">Loading Vendors from server...</ng-template>-->
+<!--</mat-card>-->
+<!--<mat-card *ngIf="!hideEditForm">-->
+<!--  <mat-card-header>-->
+<!--    <mat-card-title>-->
+<!--      <span class="my-primary-text">{{ msg }}</span>-->
+<!--    </mat-card-title>-->
+<!--  </mat-card-header>-->
+<!--  <mat-card-content>-->
+<!--    <app-vendor-detail [selectedVendor]="vendor"-->
+<!--                         (cancelled)="cancel('cancelled')"-->
+<!--                         (saved)="update($event)">-->
+<!--    </app-vendor-detail>-->
+<!--  </mat-card-content>-->
+<!--  <ng-template #loading class="my-primary-text">Loading Vendors from server...</ng-template>-->
+<!--  <div class="mat-headline" style="text-align: right">{{ msg }}</div>-->
+<!--</mat-card>-->
+
+<!--<mat-toolbar color="primary">-->
+<!--  <span>INFO5059 - Case Study</span>-->
+<!--</mat-toolbar>-->
+<mat-card *ngIf="hideEditForm">
+  <mat-card-content style="display: flex; justify-content: center">
+    <img mat-card-image mat-card-sm-image style="padding: 30px" src="https://i.imgur.com/2QRMD0E.png" alt="vendors">
+    <mat-card-title style="font-size: x-large; margin-right: 30px; margin-top: 30px; margin-bottom: 2vh;"> - vendors</mat-card-title>
+  </mat-card-content>
+  <mat-card-header *ngIf="vendors$ | async; else loading">
+<!--    <mat-card-title>-->
+<!--      <div class="my-primary-text main-div">{{ msg }}</div>-->
+<!--    </mat-card-title>-->
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <app-vendor-list [vendors]="vendors$ | async" (selected)="select($event)"></app-vendor-list>
+    </mat-list>
+    <div class="padtop15">
+      <mat-icon (click)="newVendor()" matTooltip="Add New Vendor" class="addicon" matTooltipHideDelay="100000" color="primary" autofocus>
+        control_point
+      </mat-icon>
+    </div>
+<!--    <mat-card-content>-->
+<!--      <div class="my-primary-text main-div" style="text-align: right">{{ msg }}</div>-->
+<!--    </mat-card-content>-->
+  </mat-card-content>
+</mat-card>
+<mat-card *ngIf="!hideEditForm">
+  <mat-card-header>
+<!--    <mat-card-title>-->
+<!--      <span class="my-primary-text">{{ msg }}</span>-->
+<!--    </mat-card-title>-->
+  </mat-card-header>
+  <mat-card-content>
+<!--    <app-vendor-detail   [selectedVendor]="vendor"-->
+<!--                         (cancelled)="cancel('cancelled')"-->
+<!--                         (saved)="update($event)">-->
+<!--    </app-vendor-detail>-->
+    <app-vendor-detail [selectedVendor]="vendor"
+                         (cancelled)="cancel('cancelled')"
+                         (saved)="save($event)"
+                         (deleted)="delete($event)">
+    </app-vendor-detail>
+  </mat-card-content>
+  <ng-template #loading class="my-primary-text">Loading Vendors from server...</ng-template>
+</mat-card>
+<div class="my-primary-text main-div" style="text-align: right; font-size:22px; font-weight: bold; margin: 2px">{{ msg }}</div>
