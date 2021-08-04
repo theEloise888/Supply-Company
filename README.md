@@ -8,7 +8,7 @@
 
 Clone this repo locally
 
-* git clone https://github.com/theEloise888/Travel-Alerts.git.
+* git clone https://github.com/theEloise888/Supply-Company.git.
 
 * To start the app, find the the CasestudyAppplication file and run it on Intellij. The application can be viewed on http://localhost:8080/. 
 
