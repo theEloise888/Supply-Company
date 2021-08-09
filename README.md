@@ -14,8 +14,7 @@ Clone this repo locally
 
 **Video Demo of App**
 
-![caption](https://i.imgur.com/H9fDkIh.mp4)
-
+https://user-images.githubusercontent.com/17745597/128650351-7dca1322-ad7b-4db3-a6ee-42817c0f1030.mp4
 
 
 
