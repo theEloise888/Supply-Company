@@ -14,7 +14,7 @@ Clone this repo locally
 
 **Video Demo of App**
 
-![caption](https://im3.ezgif.com/tmp/ezgif-3-b8448850bcef.gif)
+![caption](https://i.imgur.com/H9fDkIh.mp4)
 
 
 
